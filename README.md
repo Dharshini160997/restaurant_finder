@@ -21,7 +21,6 @@ To run node test cases
       
       2.npm run test
 
-To view the database schema I have attached the schema screenshot.
 
 Tables used
       
@@ -36,3 +35,5 @@ Tables used
       3.menu_catalogue
       
             Stores the menu details
+
+I have attached the table schema screenshots.
