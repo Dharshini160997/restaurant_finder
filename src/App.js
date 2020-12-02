@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import './css/styles.css'
+import UserPage from './components/UserPage';
+import OwnerPage from './components/OwnerPage';
+import SearchResult from './components/SearchResult';
+import HotelDetails from './components/HotelDetails';
+import RestrauntDtls from './components/RestrauntDtls';
+import MyComponent from './components/MyComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// import React from 'react'
+import {Redirect, BrowserRouter, Route } from 'react-router-dom'
+class App extends React.Component {
+  render () {
+    return (
+      <BrowserRouter>
+        <Route 
+          path='/' exact
+          render={ props => <MyComponent {...props} />}
+        />
+        <Route 
+          path='/user'
+          render={ props => <UserPage {...props} />}
+        />
+        <Route 
+          path='/owner'
+          render={ props => <OwnerPage {...props} />}
+        />
+        <Route 
+          path='/restaurant/details' 
+          render={ props => <RestrauntDtls {...props} />}
+        />
+         <Route 
+          path='/hotel/details' 
+          render={ props => <HotelDetails {...props} />}
+        />
+      </BrowserRouter>
+    )
+  }
 }
 
 export default App;
