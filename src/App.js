@@ -8,7 +8,6 @@ import RestrauntDtls from './components/RestrauntDtls';
 import MyComponent from './components/MyComponent';
 
 
-// import React from 'react'
 import {Redirect, BrowserRouter, Route } from 'react-router-dom'
 class App extends React.Component {
   render () {

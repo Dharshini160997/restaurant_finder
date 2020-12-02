@@ -5,13 +5,11 @@ class RestrauntDtls extends Component
 {
   constructor(props)
   {
-    console.log(props);
     super(props);
     this.state = {
       show_menu:false,
       menu_index:''
     }
-    // this.showDetails = this.showDetails.bind(this);
   }
   showDetails(index)
   {

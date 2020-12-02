@@ -14,7 +14,7 @@ app.post('/addrestraunts', (req, res) => {
   dbdetails.dbcreate(req.body).then((result)=>{res.send(result)});
 })
 app.get('/getmenudetails', (req, res) => {
-  dbdetails.getMenuDetails().then((result)=>{console.log(res.json(result));res.json(result)});
+  dbdetails.getMenuDetails().then((result)=>{res.json(result)});
 })
 app.listen(port, () => {
   console.log(`listening at http://localhost:${port}`)

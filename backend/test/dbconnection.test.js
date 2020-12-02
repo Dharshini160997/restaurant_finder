@@ -38,13 +38,3 @@ describe('fetch menu details', () => {
   });
 });
 
-// describe('fetch restraunts', () => {
-//   it('fetch details fom db when params are valid', async () => {
-//     const result = dbdetails.dbstore('chennai');
-//     expect(result).not.toBe({})
-//   });
-//   it('fetch details fom db when params are not valid', async () => {
-//     const invalidresult = dbdetails.dbstore('kolkata');
-//     expect(invalidresult).toBe(undefined)
-//   });
-// });

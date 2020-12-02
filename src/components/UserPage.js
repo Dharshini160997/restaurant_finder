@@ -20,16 +20,13 @@ class UserPage extends Component
   }
    getRestraunts()
   {
-    console.log("restraunt in",this.state)
     var url = new URL("http://localhost:5000/getrestraunts"),
     params = {"region":`${this.state.searchText}`}
-    console.log(params)
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
      fetch(url)
     .then(response => response.json())
     .then(result => 
       {
-        console.log(result);
         if(result.length !== 0)
         {
           this.props.history.push({pathname: `/restaurant/details`,state:{apiResponse:result}})
@@ -48,7 +45,6 @@ class UserPage extends Component
   
   searchByValue(searchText)
   {
-    console.log("the search text is ",searchText);
     this.setState({showContent:true,searchText:searchText},()=>{
       this.getRestraunts();
     });

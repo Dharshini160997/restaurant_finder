@@ -9,7 +9,6 @@ class MyComponent extends React.Component {
   
   onChangeValue(event) {
     this.props.history.push(`/${event.target.value}`)
-  console.log(event.target.value);
 }
   render () {
     return (

@@ -1,4 +1,3 @@
-// dependencies
 import React, { Component } from 'react';
 
 import SearchBar from './search/SearchBar'
@@ -9,8 +8,6 @@ class SearchResult extends Component
   {
     super(props);
   
-  //   this.searchTextChange = this.searchTextChange(this);
-  //   this.searchByValue = this.searchByValue(this);
     this.state = 
     {
       searchText:''
@@ -35,7 +32,6 @@ class SearchResult extends Component
   {
     if(this.state.searchText.length >= 5)
     {
-      console.log("the search text is" + this.state.searchText);
       this.props.searchByValue(this.state.searchText);
     }
   }
@@ -44,7 +40,6 @@ class SearchResult extends Component
   {
     let {searchText} = this.state;
     let {searchByValue} = this.props;
-    console.log(this.state);
     return (
       <div className = "search-results">
         <SearchBar

@@ -38,7 +38,6 @@ class OwnerPage extends Component
   handleChange(event)
   {
     this.setState({[event.target.name]:event.target.value})
-    console.log(event.target.name,event.target.value)
   }
 
     submitDetails(event)
@@ -55,9 +54,7 @@ class OwnerPage extends Component
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(this.state)
       }
-      console.log(requestOptions)
       var url = new URL("http://localhost:5000/addrestraunts")
-      console.log(url);
       fetch(url,requestOptions)
       .then(response =>{
         if (response.status == 200)
@@ -86,17 +83,13 @@ render()
     for(var i = 0 ; i < menu_details.length ; i++) 
     {
       let details = JSON.parse(this.state.menudetails[i].item_dtls)
-      console.log(details);
       let value = (details.map(data=>data['name']))
       value = value.join(',');
       rows.push(<div>{menu_details[i]['menu_id']}.{value}</div>)
-        // rows.push(<div>{details['name']}</div>)
-        // console.log("details",details,details['name']);
 
       
     }
   }
-  console.log("row value",rows)
   return(
 <div class="owner-container">
   <form>
