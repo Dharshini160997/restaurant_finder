@@ -20,3 +20,19 @@ To run node test cases
       1.cd backend/
       
       2.npm run test
+
+To view the database schema I have attached the schema screenshot.
+
+Tables used
+      
+      1.city_hotel_mapping
+            
+            Stores the details of hotel and the city it is located in.
+      
+      2.hotel_information
+      
+            Stores the hotel details.
+            
+      3.menu_catalogue
+      
+            Stores the menu details
